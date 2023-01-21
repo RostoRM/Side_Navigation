@@ -119,7 +119,7 @@ nav li a::before {
   content: '';
   width: 6vw;
   height: 3px;
-  background-color: #fff;
+  background-color: whitesmoke;
   position: absolute;
   top: 40%;
   left: 0;

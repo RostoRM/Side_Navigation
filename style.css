@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+:root {
+  --primaryColor: #fff;
+  --second-color: #620505;
+  --navColor1: #21292c;
+  --navColor2: #aa3e39;
+  --navColor3: #aa6e39;
+  --navColor4: #236267;
+  --navColor5: #2c8437;
+  --navColor1-onHover: #313c41;
+  --navColor2-onHover: #cb4b44;
+  --navColor3-onHover: #c58853;
+  --navColor4-onHover: #2e7d83;
+  --navColor5-onHover: #329f40;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+  font-weight: 1000;
+}
+
+/* Transparency Container */
+.transparency-container {
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: rgba(162, 158, 158, 0.6); */
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+/** --- Navigation Menu ------------------------------ **/
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 0.7);
+  transform: translateX(100vw);
+}
+
+.overlay-slide-right {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(80vw);
+}
+
+.overlay-slide-left {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(100vw);
+}
+
+/** Nav Menu Items **/
+nav,
+nav ul {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+}
+
+.nav-item {
+  height: 8%;
+}
+
+.home-icon {
+  padding-right: 0.5rem;
+}
+
+nav li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  height: 20%;
+  overflow: hidden;
+}
+
+nav li a {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 1000;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav li a:hover {
+  letter-spacing: 8px;
+}
+
+nav li a::before {
+  content: '';
+  width: 6vw;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  opacity: 0;
+}
+
+nav li a::after {
+  content: '';
+  width: 6vw;
+  height: 3px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  opacity: 0;
+}
+
+nav li a:hover::before {
+  opacity: 1;
+}
+
+nav li a:hover::after {
+  opacity: 1;
+}
+
+nav li:nth-of-type(1) {
+  background-color: var(--navColor1);
+}
+
+nav li:nth-of-type(2) {
+  background-color: var(--navColor1);
+}
+
+nav li:nth-of-type(2):hover {
+  background-color: var(--navColor1-onHover);
+}
+
+nav li:nth-of-type(3) {
+  background-color: var(--navColor2);
+}
+
+nav li:nth-of-type(3):hover {
+  background-color: var(--navColor2-onHover);
+}
+
+nav li:nth-of-type(4) {
+  background-color: var(--navColor3);
+}
+
+nav li:nth-of-type(4):hover {
+  background-color: var(--navColor3-onHover);
+}
+
+nav li:nth-of-type(5) {
+  background-color: var(--navColor4);
+}
+
+nav li:nth-of-type(5):hover {
+  background-color: var(--navColor4-onHover);
+}
+
+nav li:nth-of-type(6) {
+  background-color: var(--navColor5);
+}
+
+nav li:nth-of-type(6):hover {
+  background-color: var(--navColor5-onHover);
+}
+
+/** Slide in animation with for each nav item **/
+.slide-in-1 {
+  animation: slide-in 0.4s linear 0.2s both;
+}
+
+.slide-in-2 {
+  animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-3 {
+  animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slide-in-4 {
+  animation: slide-in 0.4s linear 0.8s both;
+}
+
+.slide-in-5 {
+  animation: slide-in 0.4s linear 1s both;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/** Slide Out animation with for each nav item **/
+.slide-out-1 {
+  animation: slide-out 0.3s linear 0.5s both;
+}
+
+.slide-out-2 {
+  animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-3 {
+  animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slide-out-4 {
+  animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slide-out-5 {
+  animation: slide-out 0.3s linear 0.1s both;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/** --- Menu Bars --- **/
+.menu-bars {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  display: inline;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  margin: 8px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-7px, 8px);
+}
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+/* Rotate last bar */
+.change .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/** --- Sections --- **/
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primaryColor);
+}
+
+header#home {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./img/OldTbilisi.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.header-container a {
+  font-family: 'Rampart One', cursive;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 2.8rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: var(--second-color);
+  border-bottom: 3px solid var(--second-color);
+  border-top: 3px solid var(--second-color);
+}
+
+.header-container {
+  padding-top: 2.5rem;
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.main_title {
+  font-size: 1.9rem;
+  color: var(--second-color);
+  letter-spacing: 10px;
+}
+
+section#about {
+  background-color: var(--navColor2);
+}
+
+section#skills {
+  background-color: var(--navColor3);
+}
+
+section#projects {
+  background-color: var(--navColor4);
+}
+
+section#contact {
+  background-color: var(--navColor5);
+}
+
+/* Media Query: for side navigation */
+@media (max-width: 900px) {
+  .overlay {
+    width: 100vw;
+  }
+  .overlay-slide-right {
+    transition: all 0.4s ease-in-out;
+    transform: translateX(0vw);
+  }
+  nav li a::before {
+    width: 40vw;
+  }
+
+  nav li a::after {
+    width: 40vw;
+  }
+}
+
+/* Media Query: for logo */
+@media (max-width: 700px) {
+  .header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* Media Query: for menu bar */
+@media (max-width: 600px) {
+  .menu-bars {
+    top: 0.5rem;
+    right: 1rem;
+  }
+}

@@ -348,10 +348,10 @@ section#contact {
 
 /* Media Query: for side navigation */
 @media (max-width: 900px) {
-  .overlay {
+  .sidebar {
     width: 100vw;
   }
-  .overlay-slide-right {
+  .sidebar_visible {
     transition: all 0.4s ease-in-out;
     transform: translateX(0vw);
   }

@@ -351,10 +351,12 @@ section#contact {
   .sidebar {
     width: 100vw;
   }
+
   .sidebar_visible {
     transition: all 0.4s ease-in-out;
-    transform: translateX(0vw);
+    transform: translateX(0);
   }
+
   nav li a::before {
     width: 40vw;
   }

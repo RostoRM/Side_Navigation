@@ -1,5 +1,5 @@
 const menuBars = document.getElementById('menu-bars');
-const overlay = document.getElementById('overlay');
+const sidebar = document.getElementById('sidebar');
 const transparency = document.getElementById('transparency-container');
 const nav1 = document.getElementById('nav-1');
 const nav2 = document.getElementById('nav-2');
@@ -25,15 +25,15 @@ const toggleNav = () => {
   // Toggle: transparency of whole container
   transparency.classList.toggle('transparency-container');
   // Toggle: Menu Active
-  overlay.classList.toggle('overlay-active');
-  if (overlay.classList.contains('overlay-active')) {
+  sidebar.classList.toggle('sidebar-active');
+  if (sidebar.classList.contains('sidebar-active')) {
     // Animate In - Overlay
-    overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
+    sidebar.classList.replace('sidebar_hidden', 'sidebar_visible');
     //Animate In- Nav Items
     navAnimation('out', 'in');
   } else {
     // Animate Out - Overlay
-    overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
+    sidebar.classList.replace('sidebar_visible', 'sidebar_hidden');
     //Animate Out- Nav Items
     navAnimation('in', 'out');
   }

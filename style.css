@@ -45,8 +45,8 @@ h1 {
 }
 /** --- Navigation Menu ------------------------------ **/
 
-/* Overlay */
-.overlay {
+/* Sidebar */
+.sidebar {
   position: fixed;
   z-index: 9;
   top: 0;
@@ -57,12 +57,12 @@ h1 {
   transform: translateX(100vw);
 }
 
-.overlay-slide-right {
+.sidebar_visible {
   transition: all 0.4s ease-in-out;
   transform: translateX(80vw);
 }
 
-.overlay-slide-left {
+.sidebar_hidden {
   transition: all 0.8s ease-in-out;
   transform: translateX(100vw);
 }

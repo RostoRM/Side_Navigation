@@ -15,6 +15,7 @@
   --navColor4-onHover: #2e7d83;
   --navColor5-onHover: #329f40;
 }
+
 *,
 *::before,
 *::after {
@@ -43,8 +44,8 @@ h1 {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
 }
-/** --- Navigation Menu ------------------------------ **/
 
+/** --- Navigation Menu ------------------------------ **/
 /* Sidebar */
 .sidebar {
   position: fixed;
